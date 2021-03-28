@@ -22,10 +22,11 @@ function checkForRGB(userInput){
   	
   	document.body.style.backgroundColor = '#'+userInput;
   	let str = "rgb("+r+","+g+","+b+")";
-  	document.getElementById('rgb').innerText = str;
+  	document.getElementById('rgb').value = str;
+  	console.log(str);
   }
 
-  console.log(str);
+
 }
 
 
@@ -55,7 +56,7 @@ function fetchColor({attrs}) {
 				onkeydown,
 				value: userInput
 			}),
-			 m('input#rgb[placeholder=rgb()][disabled=true]')]
+			 m('input#rgb[placeholder=rgb()]')]
 		)
 	}
 
